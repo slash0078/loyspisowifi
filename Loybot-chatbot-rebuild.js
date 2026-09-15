@@ -1,0 +1,1 @@
+{price:1999,speed:200,badge:"ULTIMATE",color:"from-blue-600 to-cyan-400",users:"10-15 users"}
