@@ -1,0 +1,19 @@
+# Exported from Render on 2026-10-19T19:18:31Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: loyspisowifi
+      runtime: python
+      repo: https://github.com/slash0078/loyspisowifi
+      plan: free
+      envVars:
+      - key: PAGE_ACCESS_TOKEN
+        sync: false
+      region: oregon
+      buildCommand: pip install -r requirements.txt
+      startCommand: gunicorn your_application.wsgi
+      autoDeployTrigger: commit
